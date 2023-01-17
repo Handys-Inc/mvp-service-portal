@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './styles/global.scss'
 import { Toaster } from 'react-hot-toast'
 import Home from './pages/home'
+import Inbox from './pages/inbox'
 
 function App () {
   return (
@@ -11,6 +12,7 @@ function App () {
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path='/'></Route>
+          <Route element={<Inbox />} path='/inbox'></Route>
         </Routes>
       </BrowserRouter>
       <Toaster />

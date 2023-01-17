@@ -1,0 +1,69 @@
+#inbox-platform {
+  display: flex;
+
+  .inbox-body {
+    display: flex;
+    flex-direction: column;
+
+    .inbox-header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 21px;
+      padding-right: 16px;
+      .right {
+        .btn-outline-dark {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16.5561px;
+          line-height: 22px;
+          text-align: center;
+          color: #626262;
+          height: 40.5px;
+          width: 153px;
+          display: flex;
+          border: 0.662243px solid #626262;
+          border-radius: 66.2243px;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .left {
+        position: relative;
+        h3 {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+
+          /* black */
+
+          color: #282828;
+        }
+        .online {
+          display: flex;
+          position: absolute;
+          top: 102%;
+          align-items: center;
+
+          span {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+
+            color: #118431;
+          }
+
+          svg {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import TopHeader from '../components/topheader/TopHeader'
+import TopHeader from '../features/defaultlayout/topheader/TopHeader'
 
 function DefaultLayout ({ children }) {
   return (

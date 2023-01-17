@@ -1,12 +1,20 @@
 import React from 'react'
-import TopHeader from '../../components/topheader/TopHeader'
+import Assistance from '../../features/home/assistance/Assistance'
+import Bookings from '../../features/home/bookings/Bookings'
+import Resources from '../../features/home/resources/Resources'
 import DefaultLayout from '../../layouts/DefaultLayout'
+import Welcome from './../../features/home/welcome/Welcome'
 import './home.scss'
 
 function Home () {
   return (
     <div id='home'>
-      <DefaultLayout></DefaultLayout>
+      <DefaultLayout>
+        <Welcome />
+        <Bookings />
+        <Assistance />
+        <Resources />
+      </DefaultLayout>
     </div>
   )
 }

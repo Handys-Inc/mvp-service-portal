@@ -1,9 +1,11 @@
 import React from 'react'
 
-function NotificationIcon () {
+function NotificationIcon ({ onClick, style }) {
   return (
     <svg
       width='60'
+      onClick={onClick}
+      style={style}
       height='60'
       viewBox='0 0 60 60'
       fill='none'
