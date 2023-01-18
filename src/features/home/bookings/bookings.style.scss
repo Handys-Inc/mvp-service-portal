@@ -9,6 +9,51 @@
     margin-bottom: 21px;
   }
 
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    thead {
+      tr {
+        th {
+          font-family: 'Satoshi';
+          font-style: normal;
+          padding-bottom: 26px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          color: #626262;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        // border: 1px solid rgba(153, 152, 152, 0.13);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+
+        padding: 0 19px;
+        td:first-child {
+          border-radius: 14px 0px 0px 14px;
+          padding-left: 19px;
+        }
+        td:last-child {
+          border-radius: 0px 14px 14px 0px;
+        }
+        td {
+          background: #fff;
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 20px;
+          padding: 30px 0;
+          color: #626262;
+        }
+      }
+    }
+  }
+
   .data-section {
     height: 237px;
     width: 100%;
@@ -46,6 +91,7 @@
     margin-bottom: 41px;
 
     .bubble {
+      cursor: pointer;
       background: #f5f5f5;
       border-radius: 100px;
       font-family: 'Satoshi';
@@ -56,6 +102,11 @@
       color: #282828;
       padding: 10px 26px;
       margin-right: 13px;
+    }
+
+    .bubble.active {
+      background: rgba(206, 20, 73, 0.17);
+      color: #ce1449;
     }
   }
 }

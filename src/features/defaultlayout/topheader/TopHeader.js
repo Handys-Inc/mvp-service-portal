@@ -32,7 +32,7 @@ function TopHeader () {
 
     return (
       <li className={`${link === page}`} onClick={() => {}} href key={index}>
-        <a href={`${link}`}>{elem}</a>
+        <a href={`${!!link.length ? link : '/'}`}>{elem}</a>
       </li>
     )
   }

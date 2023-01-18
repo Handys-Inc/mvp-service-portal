@@ -1,8 +1,9 @@
 #inbox-platform {
   display: flex;
-
+  width: calc(100% - 435px);
   .inbox-body {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
 
     .inbox-header {
@@ -12,6 +13,7 @@
       justify-content: space-between;
       padding-left: 21px;
       padding-right: 16px;
+      border-bottom: 2px solid rgba(153, 152, 152, 0.13);
       .right {
         .btn-outline-dark {
           font-family: 'Satoshi';
@@ -21,6 +23,7 @@
           line-height: 22px;
           text-align: center;
           color: #626262;
+          cursor: pointer;
           height: 40.5px;
           width: 153px;
           display: flex;
@@ -46,7 +49,7 @@
         .online {
           display: flex;
           position: absolute;
-          top: 102%;
+          top: calc(100% - 8px);
           align-items: center;
 
           span {

@@ -3,7 +3,20 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const InboxContext = createContext({})
 
 const InboxContextProvider = ({ children }) => {
-  return <InboxContext.Provider value={{}}>{children}</InboxContext.Provider>
+  const [contract, setContract] = useState({})
+  const [showDetails, setShowDetails] = useState(false)
+  return (
+    <InboxContext.Provider
+      value={{
+        showDetails,
+        setShowDetails,
+        contract,
+        setContract
+      }}
+    >
+      {children}
+    </InboxContext.Provider>
+  )
 }
 
 export const useInboxContext = () => {

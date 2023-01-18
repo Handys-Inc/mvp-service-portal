@@ -1,0 +1,55 @@
+#message-input {
+  display: flex;
+  align-items: center;
+  padding-bottom: 39px;
+  a {
+    margin-right: 14px;
+    svg {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  form {
+    height: 58px;
+    flex-grow: 1;
+    border: 1px solid #626262;
+    border-radius: 100px;
+    padding: 0 4px 0 26px;
+    display: flex;
+    align-items: center;
+
+    .send-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ce1449;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 22px;
+        height: auto;
+      }
+    }
+
+    input {
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      height: 58px;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 26px;
+
+      background-color: transparent;
+    }
+
+    input::placeholder {
+      color: #626262;
+    }
+  }
+}

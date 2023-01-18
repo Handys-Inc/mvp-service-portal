@@ -1,5 +1,7 @@
 #customers-section {
   width: 435px;
+  height: calc(100vh - 112px);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(153, 152, 152, 0.13);
@@ -27,8 +29,9 @@
 
     .customer {
       width: 100%;
+      cursor: pointer;
       padding: 21px 30px;
-
+      display: flex;
       border-radius: 15px;
 
       img {
