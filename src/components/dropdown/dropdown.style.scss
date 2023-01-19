@@ -1,0 +1,71 @@
+@import './../../styles/variables';
+
+#drop-down {
+  position: relative;
+  // z-index: 300;
+  span,
+  li {
+    user-select: none;
+    z-index: 100;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .dd-button {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    justify-content: center;
+
+    svg {
+      margin-left: 6px;
+      position: absolute;
+      right: 8px;
+      width: 14px;
+      height: 7px;
+      z-index: 100;
+      transform: rotate(180deg) scaleX(-1);
+    }
+  }
+
+  .dd-input {
+    display: none;
+  }
+
+  .dd-menu {
+    display: none;
+  }
+}
+
+#drop-down[x-open='open'] .dd-menu {
+  display: block;
+  width: 100%;
+
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 0;
+  border-radius: 0 0px 15px 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  padding-top: 15px;
+  padding-bottom: 6px;
+
+  li {
+    display: flex;
+    padding: 3px 0;
+    padding-left: 0px;
+    justify-content: center;
+  }
+}
+
+#drop-down[x-open='open'] {
+  svg {
+    transform: rotate(0deg) scaleX(-1) !important;
+  }
+}
