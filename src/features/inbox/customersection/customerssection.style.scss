@@ -33,6 +33,7 @@
       padding: 21px 30px;
       display: flex;
       border-radius: 15px;
+      border-bottom: 1px solid rgba(153, 152, 152, 0.13);
 
       img {
         width: 57px;
@@ -68,6 +69,10 @@
           color: #626262;
         }
       }
+    }
+
+    .customer:last-child {
+      border: none;
     }
 
     .customer.active {

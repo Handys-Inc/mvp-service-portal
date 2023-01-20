@@ -13,7 +13,7 @@ import NotificationModal from '../notificationmodal/NotificationModal'
 import './topheader.style.scss'
 import ProfileMenu from '../profilemenu/ProfileMenu'
 
-const PAGE_ROUTES = ['/', 'inbox', 'calendar', 'transactions', 'perks']
+const PAGE_ROUTES = ['/', '/inbox', '/calendar', '/transactions', '/perks']
 
 const PAGE_TITLES = {
   [HOME_PAGE]: PAGE_ROUTES[0],
