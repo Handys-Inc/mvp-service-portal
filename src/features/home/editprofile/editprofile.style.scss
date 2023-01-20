@@ -1,3 +1,246 @@
-#edit-profile{
-    
+#edit-profile {
+  margin-top: 12px;
+  .booking-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21.329px;
+      line-height: 29px;
+      color: #282828;
+      margin-bottom: 20px;
+    }
+
+    .line {
+      display: flex;
+      margin-bottom: 7px;
+      align-items: center;
+
+      #checkbox {
+        width: 21.33px;
+        height: 21.33px;
+        margin-right: 7px;
+      }
+
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.9164px;
+        line-height: 24px;
+        margin-bottom: 0;
+        color: #282828;
+      }
+    }
+  }
+  .hourly-section {
+    margin-bottom: 23px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21.329px;
+      line-height: 29px;
+      color: #282828;
+      margin-bottom: 20px;
+    }
+    .button {
+      .red-btn {
+        height: 49.05px;
+        background: #ce1449;
+        border-radius: 78.7534px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19.6884px;
+        line-height: 27px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: #ffffff;
+      }
+    }
+    .bio-section {
+      display: flex;
+      margin-bottom: 23px;
+      flex-direction: column;
+
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.329px;
+        line-height: 29px;
+        color: #282828;
+        margin-bottom: 20px;
+      }
+
+      .bio {
+        width: 100%;
+        border: 0.787534px solid #626262;
+        border-radius: 3.93767px;
+        padding: 14px;
+      }
+    }
+    .setup-payouts {
+      margin-bottom: 23px;
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.329px;
+        line-height: 29px;
+        color: #282828;
+        margin-bottom: 20px;
+      }
+
+      .payout {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16.57px;
+        a {
+          svg {
+            width: 5px;
+            height: auto;
+          }
+        }
+        img {
+          width: 37.54px;
+          height: 37.54px;
+          margin-right: 10px;
+        }
+
+        h6 {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12.7974px;
+          line-height: 17px;
+          margin-bottom: 2.6px;
+          color: #282828;
+        }
+
+        ul {
+          li {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10.2379px;
+            line-height: 14px;
+            color: #282828;
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      height: 46px;
+      margin-top: 20px;
+      border: 0.787534px solid #626262;
+      border-radius: 3.93767px;
+
+      .currency-tip {
+        width: 67px;
+        height: 100%;
+        font-family: 'Satoshi';
+        background: #f5f5f5;
+        border: 0.787534px solid #626262;
+        border-radius: 3.93767px 0px 0px 3.93767px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13.6506px;
+        line-height: 18px;
+        color: #928989;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        padding-left: 18px;
+        flex-grow: 1;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.6506px;
+        line-height: 18px;
+        color: #282828;
+      }
+    }
+  }
+  .experience-section {
+    margin-bottom: 23px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21.329px;
+      line-height: 29px;
+      color: #282828;
+      margin-bottom: 20px;
+    }
+
+    .job-types {
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+
+      .bubble {
+        padding: 8px 18px;
+        font-family: 'Satoshi';
+        margin-right: 11px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.9164px;
+        line-height: 24px;
+        color: #282828;
+        background: #f5f5f5;
+        border-radius: 85.3162px;
+      }
+    }
+  }
+  .job-type-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21.329px;
+      line-height: 29px;
+      color: #282828;
+      margin-bottom: 20px;
+    }
+
+    .job-types {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .bubble {
+        padding: 8px 18px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.9164px;
+        line-height: 24px;
+        color: #282828;
+        background: #f5f5f5;
+        border-radius: 85.3162px;
+      }
+    }
+  }
 }

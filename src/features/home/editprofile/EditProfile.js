@@ -1,26 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './editprofile.style.scss'
 import CheckBox from '../../../components/checkbox/CheckBox'
 import CaretIcon from '../../../icons/Caret.icon'
 
+const JOBS = [
+  'Painter',
+  'Plumber',
+  'Electrician',
+  'Cleaner',
+  'General handy person'
+]
+
+const EXPERIENCES = ['0-2 years', '2-5 years', '5+ years']
+
 function EditProfile () {
+  const [job, setJob] = useState(JOBS[0])
+  const [experience, setExperience] = useState(EXPERIENCES[0])
   return (
     <div id='edit-profile'>
       <div className='job-type-section'>
         <span>I am a:</span>
         <div className='job-types'>
-          <div className='bubble'>Painter</div>
-          <div className='bubble'>Plumber</div>
-          <div className='bubble'>Electrician</div>
-          <div className='bubble'>Cleaner</div>
-          <div className='bubble'>General handy person</div>
+          {JOBS.map((x, i) => (
+            <div
+              onClick={() => setJob(x)}
+              className={x === job ? 'bubble active' : 'bubble'}
+            >
+              {x}
+            </div>
+          ))}
         </div>
       </div>
       <div className='experience-section'>
-        <span>I am a:</span>
+        <span>Experience:</span>
         <div className='job-types'>
-          <div className='bubble'>0-2 years</div>
-          <div className='bubble'>2-5 years</div>
-          <div className='bubble'>5+ years</div>
+          {EXPERIENCES.map((x, i) => (
+            <div
+              onClick={() => setExperience(x)}
+              className={x === experience ? 'bubble active' : 'bubble'}
+            >
+              {x}
+            </div>
+          ))}
         </div>
       </div>
       <div className='booking-section'>
@@ -49,7 +70,7 @@ function EditProfile () {
         <span>Setup payouts</span>
         <div className='payout'>
           <div className='d-flex'>
-            <img src='' alt='' />
+            <img src='/images/paypal.png' alt='' />
             <div className='d-flex flex-column'>
               <h6>Paypal in CAD</h6>
               <ul>

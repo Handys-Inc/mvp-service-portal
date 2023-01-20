@@ -1,8 +1,10 @@
 import React from 'react'
 import './jobprofile.style.scss'
+import { useHomeContext } from '../../../pages/home/home.context'
 import TickIcon from './../../../icons/jobprofile/Tick.icon'
 
 function JobProfile () {
+  const { editProfileModalShow, setEditProfileModalShow } = useHomeContext()
   return (
     <div id='job-profile'>
       <div className='left-section'>
@@ -47,7 +49,9 @@ function JobProfile () {
             <h6>Joined in 2019</h6>
           </div>
 
-          <a>Edit profile</a>
+          <a href onClick={() => setEditProfileModalShow(true)}>
+            Edit profile
+          </a>
         </div>
 
         <div className='about-section'>

@@ -77,7 +77,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  #slide-modal {
+  #simple-modal {
     .modal-content {
       position: absolute;
     }
@@ -85,7 +85,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  #slide-modal {
+  #simple-modal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,7 +102,7 @@
   }
 }
 
-#slide-modal[theme='dark'] {
+#simple-modal[theme='dark'] {
   .modal-content {
     background-color: #1e1e1e;
     .modal-header {
