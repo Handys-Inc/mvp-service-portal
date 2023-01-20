@@ -13,7 +13,7 @@ import NotificationModal from '../notificationmodal/NotificationModal'
 import './topheader.style.scss'
 import ProfileMenu from '../profilemenu/ProfileMenu'
 
-const PAGE_ROUTES = ['', 'inbox', 'calendar', 'transactions', 'perks']
+const PAGE_ROUTES = ['/', 'inbox', 'calendar', 'transactions', 'perks']
 
 const PAGE_TITLES = {
   [HOME_PAGE]: PAGE_ROUTES[0],
@@ -29,10 +29,10 @@ function TopHeader () {
   const [profileMenuShow, setProfileMenuShow] = useState(false)
   const getPageAction = (elem, index) => {
     const link = PAGE_TITLES[elem]
-
+    console.log(page)
     return (
       <li className={`${link === page}`} onClick={() => {}} href key={index}>
-        <a href={`${!!link.length ? link : '/'}`}>{elem}</a>
+        <a href={`${link}`}>{elem}</a>
       </li>
     )
   }

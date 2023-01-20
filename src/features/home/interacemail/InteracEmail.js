@@ -1,4 +1,5 @@
 import React from 'react'
+import './interacemail.style.scss'
 import LeftIcon from '../../../icons/interacemail/Left.icon'
 import RightIcon from '../../../icons/interacemail/Right.icon'
 
