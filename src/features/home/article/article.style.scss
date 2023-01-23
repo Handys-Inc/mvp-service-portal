@@ -1,40 +1,61 @@
-#interac-email {
-  small {
+#article {
+  padding: 72px 0 122px 0;
+  h1 {
     font-family: 'Satoshi';
     font-style: normal;
-    font-weight: 400;
-    font-size: 15.8764px;
-    line-height: 21px;
-    color: #626262;
-    margin-bottom: 17px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 60px;
+    text-align: center;
+
+    /* black */
+    text-align: center;
+
+    color: #282828;
   }
 
-  input {
-    border: 0.678248px solid #626262;
-    border-radius: 3.39124px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    padding: 13px;
-    font-family: 'Satoshi';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 11.9073px;
-    line-height: 16px;
-    color: #626262;
+  img {
+    margin: 40px 0;
+    width: 100%;
+    border-radius: 26.0345px;
+    height: auto;
+  }
+
+  .body {
+    li,
+    p {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 31px;
+      color: #282828;
+    }
+
+    li {
+      margin-bottom: 14px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .buttons {
     display: flex;
     margin-top: 33px;
+    height: 60px;
     align-items: center;
+    position: relative;
     justify-content: space-between;
 
-    .btn-outline-red {
+    .btn-outline-pink {
       border: 1px solid #ce1449;
       padding: 12px 20px;
       cursor: pointer;
       display: flex;
+      position: absolute;
+      left: 0;
       align-items: center;
       border-radius: 85.3162px;
 
@@ -42,20 +63,21 @@
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 500;
-        font-size: 21.329px;
+        font-size: 18px;
         line-height: 22px;
         color: #ce1449;
       }
 
       svg {
         margin-right: 13px;
+        transform: scale(-1, -1);
         path {
           fill: #ce1449;
         }
       }
     }
 
-    .btn-red {
+    .btn-pink {
       display: flex;
       cursor: pointer;
       align-items: center;
@@ -63,18 +85,19 @@
       border-radius: 85.3162px;
       background-color: #ce1449;
       border: 1px solid #ce1449;
+      position: absolute;
+      right: 0;
       span {
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 500;
-        font-size: 21.329px;
+        font-size: 18px;
         line-height: 22px;
 
         color: #fff;
       }
 
       svg {
-        transform: scale(-1, -1);
         path {
           fill: #fff;
         }

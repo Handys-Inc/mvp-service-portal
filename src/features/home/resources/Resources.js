@@ -1,7 +1,9 @@
 import React from 'react'
+import { useHomeContext } from '../../../pages/home/home.context'
 import './resources.style.scss'
 
 function Resources () {
+  const { setArticleId, setArticleShow } = useHomeContext()
   const data = [
     {
       image: '/images/resource_1.png',
@@ -22,7 +24,13 @@ function Resources () {
 
       <div className='resources'>
         {data.map((x, i) => (
-          <div className='resource'>
+          <div
+            className='resource'
+            onClick={() => {
+              setArticleId(i)
+              setArticleShow(true)
+            }}
+          >
             <img src={x.image} alt={x.text} />
             <div className='content-box'>
               <p>{x.text}</p>

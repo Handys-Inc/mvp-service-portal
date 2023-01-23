@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './editprofile.style.scss'
 import CheckBox from '../../../components/checkbox/CheckBox'
 import CaretIcon from '../../../icons/Caret.icon'
+import { useHomeContext } from '../../../pages/home/home.context'
 
 const JOBS = [
   'Painter',
@@ -13,8 +14,14 @@ const JOBS = [
 
 const EXPERIENCES = ['0-2 years', '2-5 years', '5+ years']
 
-function EditProfile () {
+function EditProfile ({ onClose }) {
   const [job, setJob] = useState(JOBS[0])
+  const {
+    editProfileModalShow,
+    setEditProfileModalShow,
+    setupPaypalShow,
+    setSetupPaypalShow
+  } = useHomeContext()
   const [experience, setExperience] = useState(EXPERIENCES[0])
   return (
     <div id='edit-profile'>
@@ -68,10 +75,16 @@ function EditProfile () {
 
       <div className='setup-payouts'>
         <span>Setup payouts</span>
-        <div className='payout'>
+        <div
+          className='payout mt-2'
+          onClick={() => {
+            onClose()
+            setSetupPaypalShow(true)
+          }}
+        >
           <div className='d-flex'>
             <img src='/images/paypal.png' alt='' />
-            <div className='d-flex flex-column'>
+            <div className='d-flex ms-1 flex-column'>
               <h6>Paypal in CAD</h6>
               <ul>
                 <li>One business day</li>
@@ -85,8 +98,8 @@ function EditProfile () {
         </div>
         <div className='payout'>
           <div className='d-flex'>
-            <img src='' alt='' />
-            <div className='d-flex flex-column'>
+            <img src='/images/interac.png' alt='' />
+            <div className='d-flex ms-1 flex-column'>
               <h6>Interac</h6>
               <ul>
                 <li>One business day</li>

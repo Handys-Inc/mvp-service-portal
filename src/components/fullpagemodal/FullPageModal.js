@@ -10,7 +10,7 @@ function FullPageModal ({
   show,
   children,
   bgColor,
-  showHeader,
+
   showClose,
   id,
   closeBtnColor
@@ -33,32 +33,14 @@ function FullPageModal ({
             background: currentTheme === 'dark' ? '#141414' : bgColor
           }}
         >
-          {showHeader && (
-            <div className='modal-header'>
-              <h1>{title}</h1>
-              {/* {!!onBack && (
-                <div
-                  onClick={() => {
-                    onBack()
-                  }}
-                  className='modal-back'
-                >
-                  <CaretIcon
-                    color={currentTheme === 'dark' ? '#fff' : '#000'}
-                  />
-                </div>
-              )} */}
-
-              {showClose && (
-                <div
-                  onClick={() => {
-                    onClose()
-                  }}
-                  className='modal-close'
-                >
-                  <CloseIcon strokeColor={closeBtnColor} />
-                </div>
-              )}
+          {showClose && (
+            <div
+              onClick={() => {
+                onClose()
+              }}
+              className='modal-close'
+            >
+              <CloseIcon strokeColor={closeBtnColor} />
             </div>
           )}
 

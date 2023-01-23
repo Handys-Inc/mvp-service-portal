@@ -3,15 +3,33 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const HomeContext = createContext({})
 
 const HomeContextProvider = ({ children }) => {
+  const [setupPaypalShow, setSetupPaypalShow] = useState(false)
   const [editProfileShow, setEditProfileShow] = useState(false)
+  const [confirmAccountShow, setConfirmAccountShow] = useState(false)
+  const [enterCodeShow, setEnterCodeShow] = useState(false)
+  const [articleId, setArticleId] = useState()
+  const [articleShow, setArticleShow] = useState(false)
+  const [interacEmailShow, setInteracEmailShow] = useState(false)
   const [editProfileModalShow, setEditProfileModalShow] = useState(false)
   return (
     <HomeContext.Provider
       value={{
+        articleShow,
+        setArticleShow,
+        articleId,
+        setArticleId,
         editProfileShow,
         setEditProfileShow,
         editProfileModalShow,
-        setEditProfileModalShow
+        setEditProfileModalShow,
+        setupPaypalShow,
+        setSetupPaypalShow,
+        confirmAccountShow,
+        setConfirmAccountShow,
+        enterCodeShow,
+        setEnterCodeShow,
+        interacEmailShow,
+        setInteracEmailShow
       }}
     >
       {children}

@@ -1,0 +1,233 @@
+#setup-paypal {
+  margin-top: 0px;
+
+  p {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.0632px;
+    line-height: 23px;
+    color: #626262;
+    margin-bottom: 38px;
+    margin-top: -8px;
+  }
+
+  .account-holder {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19.6227px;
+      line-height: 26px;
+      color: #282828;
+      margin-bottom: 8px;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      border: 0.728949px solid #626262;
+      border-radius: 11.3215px;
+      margin-bottom: 5px;
+
+      .input {
+        height: 69px;
+        display: flex;
+        align-items: center;
+
+        input {
+          padding-left: 14.6px;
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          border: none;
+          outline: none;
+          font-size: 13.6506px;
+          line-height: 18px;
+          color: #626262;
+        }
+      }
+
+      .input:first-child {
+        border-bottom: 0.728949px solid #626262;
+      }
+    }
+  }
+
+  .account-types {
+    display: flex;
+    margin-top: 18px;
+    margin-bottom: 11.5px;
+    flex-direction: column;
+
+    h4 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19.6227px;
+      line-height: 26px;
+      color: #282828;
+      margin-bottom: 10px;
+    }
+
+    .line:not(:last-child) {
+      margin-bottom: 5.5px;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      #checkbox {
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+      }
+
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.3569px;
+        line-height: 21px;
+        /* identical to box height */
+
+        /* black */
+
+        color: #282828;
+      }
+    }
+  }
+
+  #drop-down {
+    .dd-button {
+      span {
+        .selected-name {
+          padding-left: 14.6px;
+          h6 {
+            margin-bottom: 0;
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11.0911px;
+            line-height: 15px;
+            color: #282828;
+          }
+
+          h5 {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12.7974px;
+            line-height: 17px;
+            margin-bottom: 0;
+            color: #626262;
+          }
+        }
+      }
+    }
+    .dd-menu {
+      li {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.7974px;
+        line-height: 17px;
+        color: #282828;
+      }
+    }
+  }
+
+  small {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.0911px;
+    line-height: 15px;
+    color: #626262;
+  }
+
+  .buttons {
+    display: flex;
+    margin-top: 33px;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn-outline-red {
+      border: 1px solid #ce1449;
+      padding: 12px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-radius: 85.3162px;
+
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.329px;
+        line-height: 22px;
+        color: #ce1449;
+      }
+
+      svg {
+        margin-right: 13px;
+        path {
+          fill: #ce1449;
+        }
+      }
+    }
+
+    .btn-red {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      padding: 12px 20px;
+      border-radius: 85.3162px;
+      background-color: #ce1449;
+      border: 1px solid #ce1449;
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.329px;
+        line-height: 22px;
+
+        color: #fff;
+      }
+
+      svg {
+        transform: scale(-1, -1);
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19.6227px;
+      line-height: 26px;
+      color: #282828;
+      margin-bottom: 8px;
+    }
+
+    #drop-down {
+      margin-bottom: 0;
+    }
+  }
+}

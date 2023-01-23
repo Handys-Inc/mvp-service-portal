@@ -11,7 +11,8 @@ function SimpleModal ({
   id,
   bgColor,
   size,
-  closeBtnColor
+  closeBtnColor,
+  hideHeader
 }) {
   const { currentTheme } = useAppContext()
   const array = Children.toArray(children)
@@ -39,9 +40,10 @@ function SimpleModal ({
             background: bgColor
           }}
         >
-          <div className='modal-header'>
-            <h1>{title}</h1>
-            {/* {!!onBack && (
+          {!hideHeader && (
+            <div className='modal-header'>
+              <h1>{title}</h1>
+              {/* {!!onBack && (
               <div
                 onClick={() => {
                   onBack()
@@ -52,15 +54,17 @@ function SimpleModal ({
               </div>
             )} */}
 
-            <div
-              onClick={() => {
-                onClose()
-              }}
-              className='modal-close'
-            >
-              <CloseIcon strokeColor={closeBtnColor} />
+              <div
+                onClick={() => {
+                  onClose()
+                }}
+                className='modal-close'
+              >
+                <CloseIcon strokeColor={closeBtnColor} />
+              </div>
             </div>
-          </div>
+          )}
+
           <div className='modal-body'>
             {Children.map(array, (child, index) =>
               cloneElement(child, {

@@ -1,62 +1,52 @@
 import React, { useState } from 'react'
 import PinInput from 'react-pin-input'
+import CloseIcon from '../../../icons/Close.icon'
 import EnvelopeIcon from '../../../icons/confirmaccount/Envelope.icon'
 import RightIcon from '../../../icons/confirmaccount/Right.icon'
+import { useHomeContext } from '../../../pages/home/home.context'
 
-function ConfirmAccount () {
+function ConfirmAccount ({ onClose }) {
   const [code, setCode] = useState(false)
-  const [pinCode, setPinCode] = useState('')
+  const { setEnterCodeShow } = useHomeContext()
+
   return (
     <div id='confirm-account'>
-      {!code && (
-        <>
-          <div className='header'>
-            <h3>Confirm account</h3>
-          </div>
+      <>
+        <div className='header'>
+          <h3>Confirm account</h3>
 
-          <h4>Let us know it’s really you</h4>
-          <p>
-            To continue, you’ll need to confirm your account through your email
-          </p>
-          <div className='button'>
-            <div className='d-flex align-items-center'>
-              <EnvelopeIcon />
-              <span>Email</span>
-            </div>
-
-            <a>
-              <RightIcon />
-            </a>
-          </div>
-
-          <a>Need help?</a>
-        </>
-      )}
-      {code && (
-        <>
-          <p>Enter the code sent to your email</p>
-          <PinInput
-            length={4}
-            initialValue=''
-            secret
-            onChange={(value, index) => {
-              setPinCode(value)
+          <div
+            onClick={() => {
+              onClose()
             }}
-            type='numeric'
-            inputMode='number'
-            style={{ padding: '10px 0' }}
-            inputStyle={{ borderColor: 'red' }}
-            inputFocusStyle={{ borderColor: 'blue' }}
-            onComplete={(value, index) => {}}
-            autoSelect={true}
-            regexCriteria={/^[ A-Za-z0-9_@./#&+-]*$/}
-          />
-
-          <div className='button'>
-            <div className='btn-pink'>Confirm</div>
+            className='modal-close'
+          >
+            <CloseIcon />
           </div>
-        </>
-      )}
+        </div>
+
+        <h4>Let us know it’s really you</h4>
+        <p>
+          To continue, you’ll need to confirm your account through your email
+        </p>
+        <div className='button'>
+          <div className='d-flex align-items-center'>
+            <EnvelopeIcon />
+            <input type='text' placeholder='Email' />
+          </div>
+
+          <a
+            href
+            onClick={() => {
+              setEnterCodeShow(false)
+            }}
+          >
+            <RightIcon />
+          </a>
+        </div>
+
+        <a className='help'>Need help?</a>
+      </>
     </div>
   )
 }

@@ -48,8 +48,8 @@ const DropDown = forwardRef(
           }}
           className={`dd-button ${className ? className : ''}`}
           style={{
-            background: bgColor,
-            width: `calc(${length}ch + ${!!backBtn ? '32' : '20'}px)`
+            background: bgColor
+            // width: `calc(${length}ch + ${!!backBtn ? '32' : '20'}px)`
           }}
         >
           <span
