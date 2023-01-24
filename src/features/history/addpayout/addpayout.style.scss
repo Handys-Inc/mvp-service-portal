@@ -1,0 +1,68 @@
+#add-payout-method {
+  display: flex;
+  padding: 26px 20px 20px 20px;
+  background: #ffffff;
+  margin-bottom: 44px;
+  border: 1px solid rgba(153, 152, 152, 0.13);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  svg {
+    width: 36px;
+    height: 36px;
+    margin-right: 14px;
+  }
+
+  .inner {
+    flex-grow: 1;
+
+    .d-column {
+      h4 {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 21px;
+        color: #282828;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #626262;
+        margin-bottom: 27px;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+
+        .link {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          text-decoration-line: underline;
+          color: #282828;
+          margin-right: 15px;
+        }
+        .btn-outline-dark {
+          padding: 9px 30px;
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12.5561px;
+          line-height: 18px;
+          text-align: center;
+          color: #626262;
+          border: 0.662243px solid #626262;
+          border-radius: 66.2243px;
+        }
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
 #message-input {
   display: flex;
   align-items: center;
-  padding-bottom: 39px;
+  padding-bottom: 32px;
   a {
     margin-right: 14px;
     svg {
-      width: 58px;
-      height: 58px;
+      width: 50px;
+      height: 50px;
     }
   }
 
   form {
-    height: 58px;
+    height: 50px;
     flex-grow: 1;
     border: 1px solid #626262;
     border-radius: 100px;
@@ -20,8 +20,8 @@
     align-items: center;
 
     .send-btn {
-      width: 50px;
-      height: 50px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: #ce1449;
       display: flex;
@@ -42,7 +42,7 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 400;
-      font-size: 19px;
+      font-size: 15px;
       line-height: 26px;
 
       background-color: transparent;

@@ -1,0 +1,47 @@
+#history {
+  .wrapper {
+    padding: 155px 57px 57px 57px;
+    display: flex;
+    justify-content: center;
+    .body {
+      width: 716px;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #282828;
+        margin-bottom: 21px;
+      }
+
+      .nav {
+        display: flex;
+        margin-bottom: 43px;
+        border-bottom: 1px solid rgba(153, 152, 152, 0.13);
+        .nav-item {
+          flex-grow: 1;
+          .nav-link {
+            width: fit-content;
+            padding: 0;
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            color: #626262;
+            padding-bottom: 12px;
+          }
+
+          .nav-link.active {
+            color: #282828;
+            border-bottom: 2px solid #282828;
+          }
+        }
+      }
+    }
+  }
+}
