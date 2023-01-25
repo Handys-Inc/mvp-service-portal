@@ -53,6 +53,7 @@ function Home () {
               <SetupPaypal />
             </SimpleModal>
             <SimpleModal
+              size={'sm'}
               id='confirm-account'
               hideHeader={true}
               show={confirmAccountShow}
@@ -62,6 +63,7 @@ function Home () {
             </SimpleModal>
             <SimpleModal
               id='enter-code'
+              size={'sm'}
               hideHeader={true}
               show={enterCodeShow}
               onClose={() => setEnterCodeShow(false)}

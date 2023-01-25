@@ -92,9 +92,9 @@ function EditProfile ({ onClose }) {
               </ul>
             </div>
           </div>
-          <a>
+          <div className='caret'>
             <CaretIcon />
-          </a>
+          </div>
         </div>
         <div className='payout'>
           <div className='d-flex'>
@@ -107,7 +107,7 @@ function EditProfile ({ onClose }) {
               </ul>
             </div>
           </div>
-          <a>Verified</a>
+          <div className='verified'>Verified</div>
         </div>
       </div>
 

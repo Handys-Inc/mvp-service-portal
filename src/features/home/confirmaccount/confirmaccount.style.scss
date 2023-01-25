@@ -15,9 +15,9 @@
       text-align: center;
     }
 
-    svg {
+    .d-close {
       position: absolute;
-      top: 50%;
+      top: 15px;
       right: 0;
       transform: translateY(-50%);
     }
@@ -53,10 +53,15 @@
     color: #282828;
   }
   .button {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
     padding-bottom: 16px;
     margin-bottom: 14px;
     border-bottom: 1px solid rgba(153, 152, 152, 0.13);
     a {
+      cursor: pointer;
       svg {
         height: 9.33px;
         width: auto;

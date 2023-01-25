@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PinInput from 'react-pin-input'
+import './confirmaccount.style.scss'
 import CloseIcon from '../../../icons/Close.icon'
 import EnvelopeIcon from '../../../icons/confirmaccount/Envelope.icon'
 import RightIcon from '../../../icons/confirmaccount/Right.icon'
@@ -7,6 +8,7 @@ import { useHomeContext } from '../../../pages/home/home.context'
 
 function ConfirmAccount ({ onClose }) {
   const [code, setCode] = useState(false)
+  const [email, setEmail] = useState('')
   const { setEnterCodeShow } = useHomeContext()
 
   return (
@@ -19,7 +21,7 @@ function ConfirmAccount ({ onClose }) {
             onClick={() => {
               onClose()
             }}
-            className='modal-close'
+            className='d-close'
           >
             <CloseIcon />
           </div>
@@ -32,13 +34,23 @@ function ConfirmAccount ({ onClose }) {
         <div className='button'>
           <div className='d-flex align-items-center'>
             <EnvelopeIcon />
-            <input type='text' placeholder='Email' />
+            <input
+              type='text'
+              value={email}
+              onChange={e => {
+                setEmail(e.target.value)
+              }}
+              placeholder='Email'
+            />
           </div>
 
           <a
             href
             onClick={() => {
-              setEnterCodeShow(false)
+              if (!!email.length) {
+                onClose()
+                setEnterCodeShow(true)
+              }
             }}
           >
             <RightIcon />

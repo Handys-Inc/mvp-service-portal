@@ -5,6 +5,7 @@ import './styles/global.scss'
 import { Toaster } from 'react-hot-toast'
 import Home from './pages/home'
 import Inbox from './pages/inbox'
+import Calendar from './pages/calendar'
 import History from './pages/history'
 
 function App () {
@@ -14,6 +15,7 @@ function App () {
         <Routes>
           <Route element={<Home />} path='/'></Route>
           <Route element={<Inbox />} path='/inbox'></Route>
+          <Route element={<Calendar />} path='/calendar'></Route>
           <Route element={<History />} path='/transactions'></Route>
         </Routes>
       </BrowserRouter>

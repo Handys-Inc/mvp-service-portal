@@ -1,0 +1,25 @@
+#monthly-version {
+  padding-top: 40px;
+  width: 100%;
+
+  #month {
+    .week-labels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      .label {
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px;
+        h4 {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 19.7035px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #282828;
+        }
+      }
+    }
+  }
+}

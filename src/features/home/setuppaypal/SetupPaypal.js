@@ -109,11 +109,13 @@ function SetupPaypal ({ onClose }) {
           className='btn-red'
           onClick={() => {
             if (name === NAME_OPTIONS[0]) {
-              setNames([...names, firstName + ' ' + lastName])
-              setName(firstName + ' ' + lastName)
+              if (!!firstName.length && !!lastName.length) {
+                setNames([...names, firstName + ' ' + lastName])
+                setName(firstName + ' ' + lastName)
+              }
             } else {
               onClose()
-              setConfirmAccountShow(false)
+              setConfirmAccountShow(true)
             }
           }}
         >
