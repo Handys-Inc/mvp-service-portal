@@ -21,5 +21,26 @@
         }
       }
     }
+
+    .days-section {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      #day {
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19.7035px;
+        line-height: 24px;
+        color: #000000;
+        border-width: 1.47777px 0px 0px 1.47777px;
+        border-style: solid;
+        border-color: #c7c7cc;
+        height: 181px;
+      }
+    }
   }
 }
