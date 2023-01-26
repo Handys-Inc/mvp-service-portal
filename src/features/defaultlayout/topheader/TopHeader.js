@@ -31,12 +31,7 @@ function TopHeader () {
     const link = PAGE_TITLES[elem]
     console.log(page)
     return (
-      <li
-        className={`${link === '/' + page}`}
-        onClick={() => {}}
-        href
-        key={index}
-      >
+      <li className={`${link === page}`} onClick={() => {}} href key={index}>
         <a href={`${link}`}>{elem}</a>
       </li>
     )
