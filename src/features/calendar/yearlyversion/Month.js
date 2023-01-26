@@ -1,7 +1,7 @@
 import { useMonth } from '@datepicker-react/hooks'
 import React, { useEffect, useState } from 'react'
+import { MONTHS } from '../monthlyversion/datepicker.context'
 import Day from './Day'
-
 const WEEK_LABELS = {
   Mo: 'Mon',
   Tu: 'Tue',
@@ -11,7 +11,6 @@ const WEEK_LABELS = {
   Sa: 'Sat',
   Su: 'Sun'
 }
-
 function Month ({
   year,
   month,
@@ -22,9 +21,8 @@ function Month ({
   const { days, weekdayLabels, monthLabel } = useMonth({
     year,
     month,
-    firstDayOfWeek: 0
+    firstDayOfWeek: 1
   })
-
   const [daysOfMonth, setDaysOfMonth] = useState(days)
 
   function getPreviousDay (date = new Date(), num) {
@@ -65,21 +63,6 @@ function Month ({
       } else return x
     })
 
-    const end = 6 - days[days.length - 1].date.getDay()
-    var i = 0
-    while (i !== end) {
-      var date = getNextDay(days[days.length - 1].date, i + 1)
-      if (zeros.length > 0) zeros.pop()
-      new_days.push({
-        date,
-        dayLabel:
-          date.getDate() < 10
-            ? '0' + date.getDate()
-            : date.getDate().toString(),
-        old_month: true
-      })
-      i++
-    }
     return new_days
   }
 
@@ -88,9 +71,9 @@ function Month ({
 
     return () => {}
   }, [])
-
   return (
     <div id='month'>
+      <h1>{MONTHS[month]}</h1>
       <div className='week-labels'>
         {weekdayLabels.map(dayLabel => (
           <div className='label'>
@@ -112,8 +95,7 @@ function Month ({
               />
             )
           }
-
-          return <div key={index} id='day' />
+          return <div id='day' key={index}></div>
         })}
       </div>
     </div>

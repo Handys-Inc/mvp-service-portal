@@ -8,28 +8,30 @@ import {
   useCalendarContext,
   VERSIONS
 } from '../../../pages/calendar/calendar.context'
-
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-]
+import {
+  MONTHS,
+  useDatepickerContext
+} from '../monthlyversion/datepicker.context'
+import { START_DATE } from '@datepicker-react/hooks'
 
 function TopSection () {
-  const [date, setDate] = useState(MONTHS[0])
-  const { startDate, endDate, timeVersion, setTimeVersion } =
-    useCalendarContext()
-  const [availabilityShow, setAvailabilityShow] = useState(false)
+  const { shownMonth, setShownMonth } = useCalendarContext()
+  const { startDate, endDate, setTimeVersion } = useCalendarContext()
+  const { availabilityShow, setDateState, setAvailabilityShow, dateState } =
+    useDatepickerContext()
   const dropRef = useRef()
+
+  const formDate = date => {
+    const today = new Date()
+
+    return (
+      MONTHS[today.getMonth()] +
+      ' ' +
+      today.getDate() +
+      ', ' +
+      today.getFullYear()
+    )
+  }
   return (
     <div id='top-section'>
       {!availabilityShow && (
@@ -40,8 +42,8 @@ function TopSection () {
               id='end_day'
               toggleEvent={() => dropRef.current.getAlert('end_day')}
               textColor={'#282828'}
-              onSelect={setDate}
-              selectedValue={date + ' ' + new Date().getFullYear()}
+              onSelect={setShownMonth}
+              selectedValue={shownMonth + ' ' + new Date().getFullYear()}
               backBtn={<DownIcon />}
               list={MONTHS}
             />
@@ -86,19 +88,26 @@ function TopSection () {
 
           <div className='date-bubble'>
             <h6>Date</h6>
-            {!!startDate.length && startDate !== endDate && (
-              <span>{startDate}</span>
+            {!!dateState.startDate && !dateState.endDate && (
+              <span>{formDate(dateState.startDate)}</span>
             )}
-            {!!startDate.length && startDate === endDate && (
+            {!!dateState.startDate && !!dateState.endDate && (
               <span>
-                {startDate} - {endDate}
+                {formDate(startDate)} - {formDate(endDate)}
               </span>
             )}
           </div>
           <div
             className='availabilty-btn'
             style={{
-              background: !!startDate.length ? '#CE1449' : '#DDDDDD'
+              background: !!dateState.startDate ? '#CE1449' : '#DDDDDD'
+            }}
+            onClick={() => {
+              setDateState({
+                startDate: null,
+                endDate: null,
+                focusedInput: START_DATE
+              })
             }}
           >
             Set availability

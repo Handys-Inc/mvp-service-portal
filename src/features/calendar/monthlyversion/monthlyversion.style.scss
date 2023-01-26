@@ -24,6 +24,7 @@
 
     .days-section {
       display: grid;
+      border-bottom: 1.47777px solid #c7c7cc;
       grid-template-columns: repeat(7, 1fr);
       #day {
         padding: 8px;
@@ -40,6 +41,47 @@
         border-style: solid;
         border-color: #c7c7cc;
         height: 181px;
+        position: relative;
+
+        .contracts {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .contract:not(:last-child) {
+            margin-bottom: 8px;
+          }
+          .contract {
+            cursor: pointer;
+            padding: 7px;
+            width: 204px;
+            display: flex;
+            align-items: center;
+            border-radius: 93.1507px;
+
+            img {
+              width: 32px;
+              height: 32px;
+              margin-right: 8px;
+            }
+
+            h5 {
+              margin-bottom: 0;
+              font-family: 'Satoshi';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 19.5616px;
+              line-height: 26px;
+              color: #ffffff;
+            }
+          }
+        }
       }
     }
   }

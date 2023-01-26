@@ -1,7 +1,11 @@
+import _ from 'lodash'
 import React from 'react'
 import { Tab } from 'react-bootstrap'
+import JobDetails from '../../features/calendar/jobdetails/JobDetails'
+import DatepickerContextProvider from '../../features/calendar/monthlyversion/datepicker.context'
 import MonthlyVersion from '../../features/calendar/monthlyversion/MonthlyVersion'
 import TopSection from '../../features/calendar/topsection/TopSection'
+import YearlyVersion from '../../features/calendar/yearlyversion/YearlyVersion'
 import DefaultLayout from '../../layouts/DefaultLayout'
 import CalendarContextProvider, {
   CalendarContextConsumer,
@@ -13,21 +17,24 @@ function Calendar () {
   return (
     <CalendarContextProvider>
       <CalendarContextConsumer>
-        {({ timeVersion }) => (
+        {({ timeVersion, contract }) => (
           <div id='calendar'>
-            <DefaultLayout>
-              <Tab.Container activeKey={timeVersion}>
-                <TopSection />
-                <Tab.Content>
-                  <Tab.Pane eventKey={VERSIONS[0]}>
-                    <MonthlyVersion />
-                  </Tab.Pane>
-                  <Tab.Pane eventKey={VERSIONS[1]}>
-                    <MonthlyVersion />
-                  </Tab.Pane>
-                </Tab.Content>
-              </Tab.Container>
-            </DefaultLayout>
+            <DatepickerContextProvider>
+              <DefaultLayout>
+                <Tab.Container activeKey={timeVersion}>
+                  <TopSection />
+                  <Tab.Content>
+                    <Tab.Pane eventKey={VERSIONS[0]}>
+                      <MonthlyVersion />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey={VERSIONS[1]}>
+                      <YearlyVersion />
+                    </Tab.Pane>
+                  </Tab.Content>
+                  {!_.isEmpty(contract) && <JobDetails />}
+                </Tab.Container>
+              </DefaultLayout>
+            </DatepickerContextProvider>
           </div>
         )}
       </CalendarContextConsumer>

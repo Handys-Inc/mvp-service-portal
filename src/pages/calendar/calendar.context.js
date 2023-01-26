@@ -1,18 +1,25 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { MONTHS } from '../../features/calendar/monthlyversion/datepicker.context'
 
 const CalendarContext = createContext({})
 export const VERSIONS = ['monthly', 'yearly']
 const CalendarContextProvider = ({ children }) => {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
+  const [contract, setContract] = useState({})
+  const [shownMonth, setShownMonth] = useState(MONTHS[0])
   const [timeVersion, setTimeVersion] = useState(VERSIONS[0])
   return (
     <CalendarContext.Provider
       value={{
+        shownMonth,
+        setShownMonth,
         startDate,
         setStartDate,
         endDate,
         setEndDate,
+        contract,
+        setContract,
         timeVersion,
         setTimeVersion
       }}

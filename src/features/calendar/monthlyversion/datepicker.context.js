@@ -4,10 +4,23 @@ import React from 'react'
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const DatepickerContext = createContext({})
-
+export const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
 const DatepickerContextProvider = ({ children }) => {
   const [dateState, setDateState] = useState({
-    startDate: new Date(),
+    startDate: null,
     endDate: null,
     focusedInput: START_DATE
   })
@@ -26,24 +39,28 @@ const DatepickerContextProvider = ({ children }) => {
     goToPreviousMonths,
     goToNextMonths
   } = useDatepicker({
+    numberOfMonths: 12,
     startDate: dateState.startDate,
     endDate: dateState.endDate,
     focusedInput: dateState.focusedInput,
     onDatesChange: handleDateChange
   })
+  const [availabilityShow, setAvailabilityShow] = useState(false)
 
   function handleDateChange (data) {
+    console.log(data)
     if (!data.focusedInput) {
       setDateState({ ...data, focusedInput: START_DATE })
     } else {
       setDateState(data)
     }
   }
-  console.log(activeMonths)
 
   return (
     <DatepickerContext.Provider
       value={{
+        availabilityShow,
+        setAvailabilityShow,
         activeMonths,
         dateState,
         setDateState,

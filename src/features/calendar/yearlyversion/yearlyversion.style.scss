@@ -1,0 +1,110 @@
+#yearly-version {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16.5px;
+  padding: 19px 83px 50px 83px;
+
+  #month {
+    padding: 32px 29px;
+
+    h1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25.8617px;
+      line-height: 100%;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #ce1449;
+    }
+
+    .days-section {
+      display: grid;
+      //   row-gap: 11px;
+      grid-template-columns: repeat(7, 1fr);
+      #day {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10.7757px;
+        line-height: 13px;
+        text-align: center;
+        height: 28px;
+        width: 100%;
+        position: relative;
+
+        span {
+          z-index: 300;
+          position: absolute;
+          top: calc(50% - 5.5px);
+          left: 50%;
+          width: fit-content;
+          height: fit-content;
+          transform: translate(-50%, -50%);
+        }
+
+        .red-circle + span {
+          color: #fff;
+        }
+        .left-white-bg,
+        .right-white-bg {
+          position: absolute;
+          height: 100%;
+          background-color: #fff;
+          top: 0;
+
+          width: 50%;
+          z-index: 100;
+        }
+        .left-white-bg {
+          left: 0;
+        }
+        .right-white-bg {
+          right: 0;
+        }
+        .pink-bg {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          background-color: rgba(206, 20, 73, 0.17);
+          height: 17px;
+        }
+        .red-circle {
+          position: absolute;
+          top: 0;
+          width: 17px;
+          height: 17px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 200;
+          background: #ce1449;
+          border-radius: 100px;
+        }
+      }
+    }
+
+    .week-labels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      .label {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        h4 {
+          text-align: center;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 7.54298px;
+          line-height: 9px;
+          text-align: center;
+          text-transform: uppercase;
+          // color: rgba($color: #000000, $alpha: 1.0);
+          color: #282828;
+        }
+      }
+    }
+  }
+}

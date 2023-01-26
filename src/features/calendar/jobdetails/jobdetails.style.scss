@@ -1,0 +1,177 @@
+#job-detailss {
+  position: absolute;
+  right: 0;
+  top: 112px;
+  height: calc(100% - 112px);
+
+  min-width: 435px;
+  width: 435px;
+  background-color: #ffffff;
+  border-left: 1px solid rgba(153, 152, 152, 0.13);
+
+  .customer-info {
+    padding: 29px 29px 36px 29px;
+    border-bottom: 2px solid rgba(153, 152, 152, 0.13);
+    .line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      .close {
+        cursor: pointer;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    h2 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 29px;
+      color: #282828;
+    }
+
+    img {
+      width: 42px;
+      height: 42px;
+    }
+
+    h3 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      color: #282828;
+      margin-bottom: 9px;
+    }
+
+    h5 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      color: #626262;
+    }
+  }
+
+  .breakdown {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 29px 25px 29px;
+    border-bottom: 2px solid rgba(153, 152, 152, 0.13);
+
+    h3 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 9px;
+      color: #282828;
+    }
+    .price {
+      h4 {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        color: #626262;
+        margin-bottom: 16px;
+      }
+    }
+
+    .total {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #282828;
+    }
+  }
+
+  .buttons {
+    padding: 24px 29px 24px 29px;
+    .btn-red {
+      background: #ce1449;
+      border-radius: 92.3077px;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      padding: 13px 0;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 11px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .btn-outline-red {
+      border: 2px solid #ce1449;
+      color: #ce1449;
+      background-color: transparent;
+      border-radius: 92.3077px;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      padding: 13px 0;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+
+  .customer-address {
+    padding: 24px 29px 24px 29px;
+
+    h3 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #282828;
+      margin-bottom: 40px;
+    }
+
+    h6 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #626262;
+    }
+  }
+
+  .booking-date {
+    padding: 11px 29px 24px 29px;
+    border-bottom: 2px solid rgba(153, 152, 152, 0.13);
+
+    h3 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #282828;
+      margin-bottom: 40px;
+    }
+
+    h6 {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #626262;
+    }
+  }
+}
