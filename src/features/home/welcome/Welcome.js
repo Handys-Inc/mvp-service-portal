@@ -5,7 +5,7 @@ import './welcome.style.scss'
 function Welcome () {
   const { setEditProfileShow } = useHomeContext()
   return (
-    <div id='welcome'>
+    <div id='h-welcome'>
       <h2>Welcome Username,</h2>
 
       <div

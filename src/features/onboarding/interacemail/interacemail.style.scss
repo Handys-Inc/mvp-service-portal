@@ -1,4 +1,29 @@
 #interac-email {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 15px;
+  position: relative;
+  padding: 39px 50px 50px 50px;
+  .close {
+    position: absolute;
+    top: 34px;
+    right: 34px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  h4 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 37.8399px;
+    line-height: 51px;
+    margin-bottom: 8px;
+    color: #282828;
+  }
   small {
     font-family: 'Satoshi';
     font-style: normal;

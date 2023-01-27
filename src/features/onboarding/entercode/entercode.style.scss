@@ -1,0 +1,36 @@
+#enter-code {
+  p {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #282828;
+  }
+
+  .pincode-input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+  }
+
+  .button {
+    margin-top: 38px;
+
+    .btn-pink {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 34px;
+      background: #ce1449;
+      border-radius: 100px;
+      padding: 14px 0;
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      width: 100%;
+      color: #ffffff;
+    }
+  }
+}

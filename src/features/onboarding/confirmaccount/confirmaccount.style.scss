@@ -1,0 +1,92 @@
+#confirm-account {
+  .header {
+    position: relative;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(153, 152, 152, 0.13);
+    margin-bottom: 18px;
+    h3 {
+      width: 100%;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 31px;
+      color: #626262;
+      text-align: center;
+    }
+
+    .d-close {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  h4 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 3px;
+    color: #282828;
+  }
+
+  p {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    color: #282828;
+  }
+  .help {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    text-decoration-line: underline;
+    color: #282828;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(153, 152, 152, 0.13);
+    a {
+      cursor: pointer;
+      svg {
+        height: 9.33px;
+        width: auto;
+      }
+    }
+    .d-flex {
+      svg {
+        width: 17px;
+        height: auto;
+        margin-right: 14px;
+      }
+
+      input {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        border: none;
+        outline: none;
+      }
+
+      input::placeholder {
+        color: #626262;
+      }
+    }
+  }
+}

@@ -1,27 +1,41 @@
-#interac-email {
-  small {
-    font-family: 'Satoshi';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15.8764px;
-    line-height: 21px;
-    color: #626262;
-    margin-bottom: 17px;
-  }
+#legal-consent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 36px 40px 58px 40px;
 
-  input {
-    border: 0.678248px solid #626262;
-    border-radius: 3.39124px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    padding: 13px;
+  h4 {
     font-family: 'Satoshi';
     font-style: normal;
     font-weight: 500;
-    font-size: 11.9073px;
-    line-height: 16px;
+    font-size: 37.8462px;
+    line-height: 51px;
+    margin-bottom: 14px;
+    color: #282828;
+  }
+
+  p {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
     color: #626262;
+    margin-bottom: 30px;
+  }
+
+  .agreement {
+    margin-bottom: 50px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 30px;
+      color: #282828;
+    }
   }
 
   .buttons {

@@ -7,10 +7,11 @@
   border-right: 1px solid rgba(153, 152, 152, 0.13);
 
   .header {
-    height: 80px;
+    height: 73px;
     display: flex;
     align-items: center;
     padding-left: 45px;
+    border-bottom: 2px solid rgba(153, 152, 152, 0.13);
 
     h2 {
       font-family: 'Satoshi';
@@ -18,6 +19,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 29px;
+      margin-bottom: 0;
       color: #282828;
     }
   }
@@ -25,7 +27,7 @@
   .customers {
     display: flex;
     flex-direction: column;
-    padding: 32px 15px;
+    padding: 16px 15px 32px 15px;
 
     .customer {
       width: 100%;
@@ -67,6 +69,7 @@
           font-size: 13px;
           line-height: 19px;
           color: #626262;
+          margin-bottom: 0;
         }
       }
     }

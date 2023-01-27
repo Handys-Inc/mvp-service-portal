@@ -1,15 +1,28 @@
 import React, { useState } from 'react'
 import './interacemail.style.scss'
+import CloseIcon from './../../../icons/Close.icon'
 import LeftIcon from '../../../icons/interacemail/Left.icon'
 import RightIcon from '../../../icons/interacemail/Right.icon'
 import { useHomeContext } from '../../../pages/home/home.context'
+import {
+  PROFILE_VERSIONS,
+  useOnboardingContext
+} from '../../../pages/onboarding/onboarding.context'
 
-function InteracEmail ({ onClose }) {
-  const { setSetupPaypalShow } = useHomeContext()
+function InteracEmail () {
   const [email, setEmail] = useState('')
+  const { setProfileVersion, setInteracObj } = useOnboardingContext()
   return (
     <div id='interac-email'>
-      {/* <h1>Please type in your Interac email</h1> */}
+      <div
+        className='close'
+        onClick={() => {
+          setProfileVersion(PROFILE_VERSIONS[0])
+        }}
+      >
+        <CloseIcon />
+      </div>
+      <h4>Please type in your Interac email</h4>
       <small>We recommend you set up auto-deposit</small>
       <input
         type='text'
@@ -24,20 +37,20 @@ function InteracEmail ({ onClose }) {
         <div
           className='btn-outline-red'
           onClick={() => {
-            setSetupPaypalShow(true)
-            onClose()
+            setProfileVersion(PROFILE_VERSIONS[0])
           }}
         >
           <LeftIcon />
           <span>Back</span>
         </div>
         <div
-          className='btn-red'
           onClick={() => {
-            if (!!email.length) {
-              onClose()
-            }
+            setInteracObj({
+              email
+            })
+            setProfileVersion(PROFILE_VERSIONS[0])
           }}
+          className='btn-red'
         >
           <span>Continue</span>
           <RightIcon />

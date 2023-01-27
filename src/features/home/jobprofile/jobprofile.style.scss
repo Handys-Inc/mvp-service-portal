@@ -1,5 +1,5 @@
-#job-profile {
-  padding: 50px 130px 140px 130px;
+#h-job-profile {
+  padding: 50px 5vw 140px 5vw;
   display: flex;
   justify-content: center;
   //   align-items: center;
@@ -11,7 +11,7 @@
     background: #ffffff;
     /* outline */
     align-self: stretch;
-    width: 400px;
+    width: 34.5vw;
     margin-right: 49px;
     height: auto;
     // min-height: 100%;
@@ -79,7 +79,7 @@
   .right-section {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 480px - 49px);
+    width: calc(100% - 34.5vw - 49px);
     .right-header {
       display: flex;
       padding-right: 30px;

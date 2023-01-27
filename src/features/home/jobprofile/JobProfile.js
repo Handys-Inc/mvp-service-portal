@@ -6,7 +6,7 @@ import TickIcon from './../../../icons/jobprofile/Tick.icon'
 function JobProfile () {
   const { editProfileModalShow, setEditProfileModalShow } = useHomeContext()
   return (
-    <div id='job-profile'>
+    <div id='h-job-profile'>
       <div className='left-section'>
         <img src='/images/profile-starter.png' alt='' />
 

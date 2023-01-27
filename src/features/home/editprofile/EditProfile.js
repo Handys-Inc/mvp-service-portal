@@ -24,7 +24,7 @@ function EditProfile ({ onClose }) {
   } = useHomeContext()
   const [experience, setExperience] = useState(EXPERIENCES[0])
   return (
-    <div id='edit-profile'>
+    <div id='job-profile'>
       <div className='job-type-section'>
         <span>I am a:</span>
         <div className='job-types'>

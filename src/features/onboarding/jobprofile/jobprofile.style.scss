@@ -1,0 +1,369 @@
+#job-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 39px 50px 50px 50px;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .h4 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 37.8462px;
+    line-height: 51px;
+    margin-bottom: 14px;
+    color: #282828;
+  }
+  .booking-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    .line {
+      display: flex;
+      margin-bottom: 7px;
+      align-items: center;
+
+      #checkbox {
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+      }
+
+      span {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 0;
+        color: #282828;
+      }
+    }
+  }
+  .hourly-section {
+    margin-bottom: 23px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      height: 39px;
+      margin-top: 20px;
+      border: 0.787534px solid #626262;
+      border-radius: 3.93767px;
+
+      .currency-tip {
+        width: 67px;
+        height: 100%;
+        font-family: 'Satoshi';
+        background: #f5f5f5;
+        border: 0.787534px solid #626262;
+        border-radius: 3.93767px 0px 0px 3.93767px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        color: #928989;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        padding-left: 18px;
+        flex-grow: 1;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        color: #282828;
+      }
+    }
+  }
+  .error-line {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    svg {
+      width: 12px;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    small {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 15px;
+      color: #e80202;
+    }
+  }
+  .hourly-section.error {
+    .currency-tip {
+      background: rgba(232, 2, 2, 0.15);
+      border: 0.787534px solid #e80202;
+      color: #e80202;
+    }
+    form {
+      border: 0.787534px solid #e80202;
+
+      input {
+        color: #e80202;
+      }
+    }
+  }
+  .button {
+    .red-btn {
+      height: 49.05px;
+      background: #ce1449;
+      border-radius: 78.7534px;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 24px;
+      text-align: center;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: #ffffff;
+    }
+  }
+
+  .setup-payouts {
+    margin-bottom: 23px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    .payout {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16.57px;
+      .caret {
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        // svg {
+        //   width: 5px;
+        //   height: auto;
+        // }
+      }
+
+      .verified {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #118431;
+      }
+      img {
+        width: 37.54px;
+        height: 37.54px;
+        margin-right: 10px;
+      }
+
+      h6 {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 14px;
+        margin-bottom: 2.6px;
+        color: #282828;
+      }
+
+      ul {
+        padding-left: 16px;
+        margin-bottom: 0;
+        li {
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 7px;
+          line-height: 11px;
+          color: #282828;
+        }
+      }
+    }
+  }
+  .experience-section {
+    margin-bottom: 23px;
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    .job-types {
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+
+      .bubble {
+        padding: 8px 18px;
+        font-family: 'Satoshi';
+        margin-right: 11px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        color: #282828;
+        background: #f5f5f5;
+        border-radius: 85.3162px;
+      }
+    }
+  }
+  .availability-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+
+      sup {
+      }
+    }
+  }
+  span {
+    position: relative;
+  }
+  sup {
+    // position: absolute;
+    // top: 0;
+    // right: -4px;
+    font-family: 'Satoshi';
+    // font-style: normal;
+    font-weight: 500;
+    // font-size: 18px;
+    color: rgba(206, 20, 73, 1);
+  }
+  .bio-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    .bio {
+      width: 100%;
+      border: none;
+      // border-radius: 3.93767px;
+      padding: 0px;
+
+      textarea {
+        width: 100%;
+        border: 0.923077px solid #626262;
+        border-radius: 4.61538px;
+        padding: 14px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12.6005px;
+        line-height: 17px;
+        margin-bottom: 0;
+        /* sub texts */
+
+        color: #626262;
+      }
+    }
+  }
+  .job-type-section {
+    display: flex;
+    margin-bottom: 23px;
+    flex-direction: column;
+
+    span {
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+      margin-bottom: 13px;
+    }
+
+    .job-types {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .bubble {
+        padding: 8px 18px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 21px;
+        color: #282828;
+        background: #f5f5f5;
+        border-radius: 85.3162px;
+      }
+    }
+  }
+}

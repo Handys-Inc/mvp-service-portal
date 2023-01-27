@@ -52,7 +52,7 @@ function GrossEarnings () {
           onSelect={setEndDate}
           selectedValue={
             <p>
-              <b>From</b>
+              <b>To</b>
               <small>{endDate}</small>
             </p>
           }
