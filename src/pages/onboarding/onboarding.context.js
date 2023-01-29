@@ -19,14 +19,23 @@ const OnboardingContextProvider = ({ children }) => {
   const [profileVersion, setProfileVersion] = useState(PROFILE_VERSIONS[0])
   const [paypalObj, setPaypalObj] = useState({})
   const [profileObj, setProfileObj] = useState({})
+  const [photosObj, setPhotoObj] = useState({})
+  const [profilePhotoObj, setProfilePhotoObj] = useState({})
   const [availabilityObj, setAvailabilityObj] = useState({})
   const [interacObj, setInteracObj] = useState({})
+  const [idObj, setIDObj] = useState({})
   const [availabilityModal, setAvailabilityModal] = useState(false)
   const [confirmAccountShow, setConfirmAccountShow] = useState(false)
   const [enterCodeShow, setEnterCodeShow] = useState(false)
   return (
     <OnboardingContext.Provider
       value={{
+        idObj,
+        setIDObj,
+        photosObj,
+        setPhotoObj,
+        profilePhotoObj,
+        setProfilePhotoObj,
         profileObj,
         setProfileObj,
         availabilityObj,

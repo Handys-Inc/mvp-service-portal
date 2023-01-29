@@ -66,7 +66,12 @@ function Welcome () {
               <span>Get started</span>
             </div>
           </div>
-          <a>
+          <a
+            href
+            onClick={() => {
+              setSection(SECTIONS[2])
+            }}
+          >
             <ArrowRightIcon />
           </a>
         </div>
@@ -79,7 +84,12 @@ function Welcome () {
               <span>Get started</span>
             </div>
           </div>
-          <a>
+          <a
+            href
+            onClick={() => {
+              setSection(SECTIONS[3])
+            }}
+          >
             <ArrowRightIcon />
           </a>
         </div>
@@ -92,7 +102,12 @@ function Welcome () {
               <span>Get started</span>
             </div>
           </div>
-          <a>
+          <a
+            href
+            onClick={() => {
+              setSection(SECTIONS[4])
+            }}
+          >
             <ArrowRightIcon />
           </a>
         </div>

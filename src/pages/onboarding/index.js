@@ -11,6 +11,8 @@ import LegalConsent from '../../features/onboarding/legalconsent/LegalConsent'
 import SimpleModal from '../../components/simplemodal/SimpleModal'
 import ConfirmAccount from '../../features/onboarding/confirmaccount/ConfirmAccount'
 import EnterCode from '../../features/onboarding/entercode/EnterCode'
+import UploadProfilePhoto from '../../features/onboarding/uploadprofilephoto/UploadProfilePhoto'
+import UploadID from '../../features/onboarding/uploadid/UploadID'
 
 function Onboarding () {
   return (
@@ -59,6 +61,8 @@ function Onboarding () {
                   {section === '' && <Welcome />}
                   {section === SECTIONS[0] && <LegalConsent />}
                   {section === SECTIONS[1] && <EditProfile />}
+                  {section === SECTIONS[2] && <UploadProfilePhoto />}
+                  {section === SECTIONS[3] && <UploadID />}
                 </div>
               </OnboardingLayout>
             </div>
