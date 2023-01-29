@@ -8,11 +8,18 @@ export const SECTIONS = [
   'Upload your ID',
   'Three photos of previously completed jobs'
 ]
-export const PROFILE_VERSIONS = ['Job Profile', 'Setup Paypal', 'Interac Email']
+export const PROFILE_VERSIONS = [
+  'Job Profile',
+  'Setup Paypal',
+  'Interac Email',
+  'Availability'
+]
 const OnboardingContextProvider = ({ children }) => {
   const [section, setSection] = useState('')
   const [profileVersion, setProfileVersion] = useState(PROFILE_VERSIONS[0])
   const [paypalObj, setPaypalObj] = useState({})
+  const [profileObj, setProfileObj] = useState({})
+  const [availabilityObj, setAvailabilityObj] = useState({})
   const [interacObj, setInteracObj] = useState({})
   const [availabilityModal, setAvailabilityModal] = useState(false)
   const [confirmAccountShow, setConfirmAccountShow] = useState(false)
@@ -20,6 +27,10 @@ const OnboardingContextProvider = ({ children }) => {
   return (
     <OnboardingContext.Provider
       value={{
+        profileObj,
+        setProfileObj,
+        availabilityObj,
+        setAvailabilityObj,
         confirmAccountShow,
         setConfirmAccountShow,
         enterCodeShow,

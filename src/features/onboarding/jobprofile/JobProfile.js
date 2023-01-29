@@ -32,8 +32,15 @@ function JobProfile ({ onClose }) {
   const standard = 100
   const [showError, setShowError] = useState(false)
   const [booking, setBooking] = useState('')
-  const { setSetupPaypalShow, setProfileVersion, paypalObj, interacObj } =
-    useOnboardingContext()
+  const {
+    setSetupPaypalShow,
+    setProfileVersion,
+    setProfileObj,
+    profileObj,
+    availabilityObj,
+    paypalObj,
+    interacObj
+  } = useOnboardingContext()
   const [experience, setExperience] = useState(EXPERIENCES[0])
 
   const validate = () => {
@@ -187,11 +194,17 @@ function JobProfile ({ onClose }) {
         <span>
           Set availability<sup>*</sup>
         </span>
-        <div className='avail-line'>
+        <div className='avail-line d-flex align-items-center'>
           <div className='grey-btn'>
             <span>Jan 6, 2023 - March 6, 2023</span>
           </div>
-          <a>
+          <a
+            href
+            className='ms-2 pointer'
+            onClick={() => {
+              setProfileVersion(PROFILE_VERSIONS[3])
+            }}
+          >
             <EditIcon />
           </a>
         </div>
@@ -200,6 +213,7 @@ function JobProfile ({ onClose }) {
         className='button'
         onClick={() => {
           if (validate()) {
+            setProfileObj({ profileObj, interacObj, availabilityObj })
           } else {
             $('#hourly').addClass('error')
             setShowError(true)
