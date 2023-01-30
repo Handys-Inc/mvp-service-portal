@@ -10,7 +10,7 @@ import {
 
 function LegalConsent () {
   const [agreement, setAgreement] = useState(false)
-  const { setSection } = useOnboardingContext()
+  const { setSection, agreementObj, setAgreementObj } = useOnboardingContext()
   return (
     <div id='legal-consent'>
       <h4>Legal Consent</h4>
@@ -52,6 +52,7 @@ function LegalConsent () {
           className='btn-red'
           onClick={() => {
             setSection('')
+            setAgreementObj({ agreement })
           }}
         >
           <span>Next</span>

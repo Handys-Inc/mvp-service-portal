@@ -20,8 +20,8 @@
     font-family: 'Satoshi';
     font-style: normal;
     font-weight: 500;
-    font-size: 37.8462px;
-    line-height: 51px;
+    font-size: 32px;
+    line-height: 45px;
     margin-bottom: 14px;
     color: #282828;
   }
@@ -34,8 +34,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 16px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -55,8 +55,8 @@
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 400;
-        font-size: 13px;
-        line-height: 21px;
+        font-size: 8px;
+        line-height: 14px;
         margin-bottom: 0;
         color: #282828;
       }
@@ -68,8 +68,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -91,8 +91,8 @@
         border-radius: 3.93767px 0px 0px 3.93767px;
         font-style: normal;
         font-weight: 500;
-        font-size: 10px;
-        line-height: 15px;
+        font-size: 11px;
+        line-height: 11px;
         color: #928989;
         display: flex;
         align-items: center;
@@ -108,7 +108,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 10px;
-        line-height: 15px;
+        line-height: 11px;
         color: #282828;
       }
     }
@@ -127,8 +127,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 11px;
-      line-height: 15px;
+      font-size: 6px;
+      line-height: 11px;
       color: #e80202;
     }
   }
@@ -154,8 +154,9 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 17px;
-      line-height: 24px;
+      font-size: 12px;
+      line-height: 20px;
+      cursor: pointer;
       text-align: center;
       display: flex;
       cursor: pointer;
@@ -172,8 +173,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -199,8 +200,8 @@
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: 10px;
+        line-height: 15px;
         color: #118431;
       }
       img {
@@ -213,8 +214,8 @@
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 500;
-        font-size: 9px;
-        line-height: 14px;
+        font-size: 8px;
+        line-height: 10px;
         margin-bottom: 2.6px;
         color: #282828;
       }
@@ -226,8 +227,8 @@
           font-family: 'Satoshi';
           font-style: normal;
           font-weight: 400;
-          font-size: 7px;
-          line-height: 11px;
+          font-size: 6px;
+          line-height: 8px;
           color: #282828;
         }
       }
@@ -239,8 +240,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -256,8 +257,8 @@
         margin-right: 11px;
         font-style: normal;
         font-weight: 400;
-        font-size: 15px;
-        line-height: 21px;
+        font-size: 11px;
+        line-height: 15px;
         color: #282828;
         background: #f5f5f5;
         border-radius: 85.3162px;
@@ -273,8 +274,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
 
@@ -304,8 +305,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -324,8 +325,8 @@
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 400;
-        font-size: 12.6005px;
-        line-height: 17px;
+        font-size: 11px;
+        line-height: 12px;
         margin-bottom: 0;
         /* sub texts */
 
@@ -342,8 +343,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 14px;
       color: #282828;
       margin-bottom: 13px;
     }
@@ -351,15 +352,18 @@
     .job-types {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
       .bubble {
+        margin-bottom: 8px;
+        margin-right: 10px;
         padding: 8px 18px;
         font-family: 'Satoshi';
         font-style: normal;
         font-weight: 400;
-        font-size: 13px;
-        line-height: 21px;
+        font-size: 8px;
+        line-height: 14px;
         color: #282828;
         background: #f5f5f5;
         border-radius: 85.3162px;

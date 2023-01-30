@@ -31,8 +31,6 @@ function Availability () {
     return () => {}
   }, [])
 
-  console.log(endMonths)
-
   return (
     <div id='availibity'>
       <div className='a-header'>

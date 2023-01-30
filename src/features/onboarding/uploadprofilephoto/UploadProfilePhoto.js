@@ -17,7 +17,7 @@ function UploadProfilePhoto () {
   const webcamRef = React.useRef(null)
   const inputRef = React.useRef(null)
   const imgRef = React.useRef(null)
-  const { setProfilePhotoObj } = useOnboardingContext()
+  const { setProfilePhotoObj, setSection } = useOnboardingContext()
   const capture = React.useCallback(() => {
     const pictureSrc = webcamRef.current.getScreenshot()
     setPicture(pictureSrc)
@@ -105,6 +105,7 @@ function UploadProfilePhoto () {
               className='btn-red pointer'
               onClick={() => {
                 setProfilePhotoObj({ picture })
+                setSection('')
               }}
             >
               Finish

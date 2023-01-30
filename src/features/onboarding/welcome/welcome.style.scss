@@ -12,8 +12,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 500;
-      font-size: 40px;
-      line-height: 54px;
+      font-size: 36px;
+      line-height: 50px;
       color: #282828;
       margin-bottom: 5px;
     }
@@ -21,8 +21,8 @@
       font-family: 'Satoshi';
       font-style: normal;
       font-weight: 400;
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 26px;
       color: #626262;
     }
   }
@@ -59,8 +59,8 @@
           font-family: 'Satoshi';
           font-style: normal;
           font-weight: 500;
-          font-size: 27px;
-          line-height: 36px;
+          font-size: 22px;
+          line-height: 31px;
           color: #282828;
           margin-bottom: 6px;
         }
@@ -69,13 +69,16 @@
           font-family: 'Satoshi';
           font-style: normal;
           font-weight: 400;
-          font-size: 22px;
-          line-height: 30px;
+          font-size: 16px;
+          line-height: 26px;
           color: #626262;
         }
 
         span.red {
           color: #ce1449;
+        }
+        span.green {
+          color: #118431;
         }
       }
     }

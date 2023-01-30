@@ -13,6 +13,7 @@ import ConfirmAccount from '../../features/onboarding/confirmaccount/ConfirmAcco
 import EnterCode from '../../features/onboarding/entercode/EnterCode'
 import UploadProfilePhoto from '../../features/onboarding/uploadprofilephoto/UploadProfilePhoto'
 import UploadID from '../../features/onboarding/uploadid/UploadID'
+import UploadPhotos from '../../features/onboarding/uploadphotos/UploadPhotos'
 
 function Onboarding () {
   return (
@@ -63,6 +64,7 @@ function Onboarding () {
                   {section === SECTIONS[1] && <EditProfile />}
                   {section === SECTIONS[2] && <UploadProfilePhoto />}
                   {section === SECTIONS[3] && <UploadID />}
+                  {section === SECTIONS[4] && <UploadPhotos />}
                 </div>
               </OnboardingLayout>
             </div>

@@ -7,16 +7,21 @@ function UploadPhotos () {
   const [files, setFiles] = useState([])
   const [fileLinks, setFileLinks] = useState([])
   const inputRef = useRef()
-  const { photosObj, setPhotoObj } = useOnboardingContext()
+  const { setSection, setPhotoObj } = useOnboardingContext()
   const uploads = evt => {
-    const files = inputRef.current.files
+    const files = evt.target.files
 
     if (!!files.length) {
-      files.slice(0, 3).map((x, i) => setFileLinks([URL.createObjectURL(x)]))
+      setFileLinks(
+        Object.values(files)
+          .slice(0, 3)
+          .map((x, i) => URL.createObjectURL(x))
+      )
 
-      setFiles(files.slice(0, 3))
+      setFiles(Object.values(files).slice(0, 3))
     }
   }
+  console.log(fileLinks)
   return (
     <div id='upload-photos'>
       <h2>Take or upload your profile photo</h2>
@@ -37,7 +42,7 @@ function UploadPhotos () {
         <div
           className='upload'
           style={{
-            border: !!files[0] ? '2px dashed #626262' : ''
+            border: !files[0] ? '2px dashed #626262' : ''
           }}
         >
           {!!files[0] && (
@@ -60,7 +65,7 @@ function UploadPhotos () {
         <div
           className='upload'
           style={{
-            border: !!files[1] ? '2px dashed #626262' : ''
+            border: !files[1] ? '2px dashed #626262' : ''
           }}
         >
           {!!files[1] && (
@@ -83,7 +88,7 @@ function UploadPhotos () {
         <div
           className='upload'
           style={{
-            border: !!files[2] ? '2px dashed #626262' : ''
+            border: !files[2] ? '2px dashed #626262' : ''
           }}
         >
           {!!files[2] && (
@@ -111,6 +116,7 @@ function UploadPhotos () {
           onClick={() => {
             if (!!files.length) {
               setPhotoObj({ images: files })
+              setSection('')
             }
           }}
         >

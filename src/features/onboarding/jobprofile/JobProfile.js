@@ -24,6 +24,21 @@ const BOOKING_OPTIONS = [
   'All clients must send a reservation request'
 ]
 
+const MONTHS = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec'
+]
+
 const EXPERIENCES = ['0-2 years', '2-5 years', '5+ years']
 
 function JobProfile ({ onClose }) {
@@ -39,7 +54,8 @@ function JobProfile ({ onClose }) {
     profileObj,
     availabilityObj,
     paypalObj,
-    interacObj
+    interacObj,
+    setSection
   } = useOnboardingContext()
   const [experience, setExperience] = useState(EXPERIENCES[0])
 
@@ -47,6 +63,11 @@ function JobProfile ({ onClose }) {
     return parseFloat(rate) < standard
   }
 
+  const formDate = date => {
+    var formatted =
+      MONTHS[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear()
+    return formatted
+  }
   return (
     <div id='job-profile'>
       <h4 className='h4'>Job profile</h4>
@@ -196,7 +217,12 @@ function JobProfile ({ onClose }) {
         </span>
         <div className='avail-line d-flex align-items-center'>
           <div className='grey-btn'>
-            <span>Jan 6, 2023 - March 6, 2023</span>
+            {!!availabilityObj.startDate && !!availabilityObj.endDate && (
+              <span>
+                {formDate(availabilityObj.startDate)} -{' '}
+                {formDate(availabilityObj.endDate)}
+              </span>
+            )}
           </div>
           <a
             href
@@ -213,6 +239,7 @@ function JobProfile ({ onClose }) {
         className='button'
         onClick={() => {
           if (validate()) {
+            setSection('')
             setProfileObj({ profileObj, interacObj, availabilityObj })
           } else {
             $('#hourly').addClass('error')

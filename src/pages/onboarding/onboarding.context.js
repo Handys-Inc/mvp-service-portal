@@ -18,6 +18,7 @@ const OnboardingContextProvider = ({ children }) => {
   const [section, setSection] = useState('')
   const [profileVersion, setProfileVersion] = useState(PROFILE_VERSIONS[0])
   const [paypalObj, setPaypalObj] = useState({})
+  const [agreementObj, setAgreementObj] = useState({})
   const [profileObj, setProfileObj] = useState({})
   const [photosObj, setPhotoObj] = useState({})
   const [profilePhotoObj, setProfilePhotoObj] = useState({})
@@ -30,6 +31,8 @@ const OnboardingContextProvider = ({ children }) => {
   return (
     <OnboardingContext.Provider
       value={{
+        agreementObj,
+        setAgreementObj,
         idObj,
         setIDObj,
         photosObj,

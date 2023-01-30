@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React from 'react'
 import ArrowRightIcon from '../../../icons/welcome/ArrowRight.icon'
 import JobIcon from '../../../icons/welcome/Job.icon'
@@ -12,7 +13,14 @@ import {
 import './welcome.style.scss'
 
 function Welcome () {
-  const { setSection } = useOnboardingContext()
+  const {
+    setSection,
+    agreementObj,
+    profileObj,
+    photosObj,
+    profilePhotoObj,
+    idObj
+  } = useOnboardingContext()
   return (
     <div id='welcome'>
       <div className='w-header d-flex flex-column align-items-center'>
@@ -27,7 +35,11 @@ function Welcome () {
 
             <div className='d-flex flex-column'>
               <h4>Legal agreement</h4>
-              <span className='red'>Recommended next step</span>
+              {_.isEmpty(agreementObj) ? (
+                <span className='red'>Recommended next step</span>
+              ) : (
+                <span className='green'>Verfied</span>
+              )}
             </div>
           </div>
           <a
@@ -45,7 +57,11 @@ function Welcome () {
 
             <div className='d-flex flex-column'>
               <h4>Job profile</h4>
-              <span>Get started</span>
+              {_.isEmpty(profileObj) ? (
+                <span>Get started</span>
+              ) : (
+                <span className='green'>Verified</span>
+              )}
             </div>
           </div>
           <a
@@ -63,7 +79,11 @@ function Welcome () {
 
             <div className='d-flex flex-column'>
               <h4>Profile photo</h4>
-              <span>Get started</span>
+              {_.isEmpty(profilePhotoObj) ? (
+                <span>Get started</span>
+              ) : (
+                <span className='green'>Verified</span>
+              )}
             </div>
           </div>
           <a
@@ -81,7 +101,11 @@ function Welcome () {
 
             <div className='d-flex flex-column'>
               <h4>Upload your ID</h4>
-              <span>Get started</span>
+              {_.isEmpty(idObj) ? (
+                <span>Get started</span>
+              ) : (
+                <span className='green'>Verified</span>
+              )}
             </div>
           </div>
           <a
@@ -99,7 +123,11 @@ function Welcome () {
 
             <div className='d-flex flex-column'>
               <h4>Three photos of previously completed jobs</h4>
-              <span>Get started</span>
+              {_.isEmpty(photosObj) ? (
+                <span>Get started</span>
+              ) : (
+                <span className='green'>Verified</span>
+              )}
             </div>
           </div>
           <a

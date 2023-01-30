@@ -54,6 +54,13 @@ a {
   color: #282828;
 }
 
+body,
+html {
+  width: 100vw;
+
+  overflow-x: hidden;
+}
+
 .wrapper {
 }
 

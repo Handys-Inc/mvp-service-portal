@@ -48,7 +48,6 @@ const DatepickerContextProvider = ({ children }) => {
   const [availabilityShow, setAvailabilityShow] = useState(false)
 
   function handleDateChange (data) {
-    console.log(data)
     if (!data.focusedInput) {
       setDateState({ ...data, focusedInput: START_DATE })
     } else {
