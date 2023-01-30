@@ -1,0 +1,37 @@
+#top-landing {
+  display: flex;
+  align-items: center;
+  padding: 68px 0;
+  justify-content: space-between;
+
+  h1 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 96px;
+    margin-bottom: 32px;
+    color: #ce1449;
+  }
+
+  .flex-column {
+    width: calc((100% - 43px) / 2);
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  h4 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+
+    /* sub texts */
+
+    color: #626262;
+  }
+}

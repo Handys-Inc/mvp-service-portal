@@ -8,6 +8,7 @@ import Inbox from './pages/inbox'
 import Calendar from './pages/calendar'
 import History from './pages/history'
 import Onboarding from './pages/onboarding'
+import Perks from './pages/perks'
 
 function App () {
   return (
@@ -19,6 +20,7 @@ function App () {
           <Route element={<Calendar />} path='/calendar'></Route>
           <Route element={<History />} path='/transactions'></Route>
           <Route element={<Onboarding />} path='/onboarding'></Route>
+          <Route element={<Perks />} path='/perks'></Route>
         </Routes>
       </BrowserRouter>
       <Toaster />
