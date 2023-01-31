@@ -7,7 +7,7 @@
   border-right: 1px solid rgba(153, 152, 152, 0.13);
 
   .header {
-    height: 73px;
+    min-height: 73px;
     display: flex;
     align-items: center;
     padding-left: 45px;
@@ -34,7 +34,7 @@
       cursor: pointer;
       padding: 21px 30px;
       display: flex;
-      border-radius: 15px;
+
       border-bottom: 1px solid rgba(153, 152, 152, 0.13);
 
       img {
@@ -79,6 +79,7 @@
     }
 
     .customer.active {
+      border-radius: 15px;
       background: rgba(153, 152, 152, 0.13);
     }
   }
