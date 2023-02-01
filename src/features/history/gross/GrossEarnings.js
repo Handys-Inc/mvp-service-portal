@@ -3,8 +3,23 @@ import DropDown from '../../../components/dropdown'
 import DownIcon from '../../../icons/Down.icon'
 import CloseIcon from '../../../icons/Close.icon'
 import './gross.style.scss'
-const DATE_OPTIONS = ['January', 'February']
-const DAY_OPTIONS = ['0', '1']
+const DATE_OPTIONS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
+const DAY_OPTIONS = [...new Array(20)].map(
+  (x, i) => new Date().getFullYear() - i
+)
 function GrossEarnings () {
   const [dates, setDates] = useState(DATE_OPTIONS)
   const [days, setDays] = useState(DAY_OPTIONS)

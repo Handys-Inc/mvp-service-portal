@@ -103,6 +103,8 @@
 
     #drop-down {
       .dd-menu {
+        max-height: 20vh;
+        overflow-y: auto;
         li {
           font-family: 'Satoshi';
           font-style: normal;

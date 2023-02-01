@@ -24,6 +24,8 @@
     bottom: -1px;
     left: -1px;
     border: none;
+    overflow-y: auto;
+    max-height: calc(90vh);
     width: calc(100vw + 2px);
     background: #ffff;
     border-top-left-radius: 11.813px;
